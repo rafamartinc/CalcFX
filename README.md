@@ -1,2 +1,3 @@
-# FXTutorials
-A collection of game related tutorials on JavaFX from my channel on YouTube https://www.youtube.com/almasb0/videos
+# CalcFX
+A simple calculator developed on JavaFX, based on the works by Almas.
+Original source at: https://github.com/AlmasB/FXTutorials/tree/master/src/com/almasb/calc
