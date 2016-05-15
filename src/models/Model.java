@@ -1,3 +1,5 @@
+package models;
+
 public class Model {
 
     public long calculate(long number1, long number2, String operator) {

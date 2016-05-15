@@ -1,3 +1,5 @@
+package views;
+
 import java.util.Arrays;
 import java.util.List;
 import javafx.event.ActionEvent;
@@ -11,16 +13,17 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.geometry.Pos;
 import javafx.scene.paint.Color;
+import controllers.ControllerJavaFX;
 
 public class ViewJavaFX {
 	
-	Stage primaryStage;
         ControllerJavaFX controller;
+	Stage primaryStage;
         Text text;
 	
 	public ViewJavaFX(Stage primaryStage, ControllerJavaFX controller){
-		this.primaryStage = primaryStage;
                 this.controller = controller;
+		this.primaryStage = primaryStage;
 	}
 	
 	public void show(){
@@ -50,8 +53,6 @@ public class ViewJavaFX {
                 String[] buttonContents = new String[]{"7", "8", "9",
                             "/", "4", "5", "6", "*", "1", "2", "3",
                             "-", "0", "=", "+"};
-                List<String> digits = Arrays.asList("0", "1", "2", "3", "4",
-                            "5", "6", "7", "8", "9");
 		
                 HBox[] hBox = new HBox[4];
                 Button button;
@@ -65,30 +66,14 @@ public class ViewJavaFX {
                         button = new Button(buttonContents[4*i + j]);
                         button.setFont(font);
 
-                        if(button.getText() == "0") {
-                            button.setPrefWidth(110);
-                            button.setOnAction(new EventHandler<ActionEvent>(){
-                               @Override public void handle(ActionEvent e){
-                                   controller.processNumpad(e);
-                               } 
-                            });
-                        }
-                        else if(digits.contains(button.getText())) {
-                            button.setPrefWidth(50);
-                            button.setOnAction(new EventHandler<ActionEvent>(){
-                               @Override public void handle(ActionEvent e){
-                                   controller.processNumpad(e);
-                               } 
-                            });
-                        }
-                        else {
-                            button.setPrefWidth(50);
-                            button.setOnAction(new EventHandler<ActionEvent>(){
-                               @Override public void handle(ActionEvent e){
-                                   controller.processOperator(e);
-                               } 
-                            });
-                        }
+                        if(button.getText() == "0") button.setPrefWidth(110);
+                        else button.setPrefWidth(50);
+                        
+                        button.setOnAction(new EventHandler<ActionEvent>(){
+                           @Override public void handle(ActionEvent e){
+                               controller.process(e);
+                           } 
+                        });
 
                         hBox[i].getChildren().add(button);   
                     }
