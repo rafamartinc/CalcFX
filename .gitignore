@@ -1,6 +1,10 @@
-/nbproject
-/test
+/build/
+/CalcJ/nbproject/
+/CalcJ/build.xml
+/CalcJ/manifest.mf
+/dist/
+/nbproject/
+/test/
 build.xml
 manifest.mf
-/build/
-/dist/
+/CalcJ/build/
