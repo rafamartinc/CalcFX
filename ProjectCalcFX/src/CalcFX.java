@@ -1,4 +1,3 @@
-import controllers.Controller;
 import controllers.ControllerJavaFX;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +8,7 @@ import javax.swing.text.View;
 
 public class CalcFX extends Application {
     
-    public static final boolean useFXML = true;
+    public static final boolean useFXML = false;
 
     public static void main(String[] args) {
         launch();
@@ -21,7 +20,7 @@ public class CalcFX extends Application {
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
         } else {
-            Controller c = new ControllerJavaFX(primaryStage);
+            new ControllerJavaFX(primaryStage);
         }
     }
 }

@@ -1,19 +1,19 @@
 package views;
 
-import java.util.Arrays;
-import java.util.List;
+import controllers.ControllerJavaFX;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.stage.Stage;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.layout.*;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.geometry.Pos;
-import javafx.scene.paint.Color;
-import controllers.ControllerJavaFX;
+import javafx.stage.Stage;
 
 public class ViewJavaFX {
 	

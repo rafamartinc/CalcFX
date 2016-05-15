@@ -1,5 +1,3 @@
-package calcj;
-
 import java.awt.Button;
 import java.util.Arrays;
 import java.util.List;
@@ -10,7 +8,7 @@ import javax.swing.JButton;
 public class Controller implements ActionListener {
     
     // --- ATRIBUTES ---
-    protected Model model;
+    private Model model;
     private View view;
     
     protected long number1;

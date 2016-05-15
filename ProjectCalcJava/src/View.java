@@ -1,5 +1,3 @@
-package calcj;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -20,7 +18,7 @@ public class View extends JFrame {
         this.controller = controller;
         
         JPanel panel = new JPanel();
-        panel.setBorder(new EmptyBorder(20, 10, 20, 10));
+        panel.setBorder(new EmptyBorder(30, 10, 20, 10));
         this.setContentPane(panel);
         
         Font font = new Font("font", Font.PLAIN, 18);
